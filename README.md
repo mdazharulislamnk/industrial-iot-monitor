@@ -1,4 +1,4 @@
-# ESP32 Industrial IoT Environmental Monitor
+# Industrial IoT Environmental Monitor
 
 **Author:** Md. Azharul Islam  
 
