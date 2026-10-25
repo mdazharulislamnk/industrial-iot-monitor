@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "author": "Md. Azharul Islam",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht", "top": 120, "left": 200, "attrs": {} },
+    { "type": "wokwi-lcd1602", "id": "lcd", "top": -120, "left": 150, "attrs": { "pins": "i2c" } }
+  ],
+  "connections": [
+    [ "esp:3V3", "dht:VCC", "red", [ "h30", "v80" ] ],
+    [ "esp:GND.1", "dht:GND", "black", [ "h40", "v90" ] ],
+    [ "esp:D15", "dht:SDA", "green", [ "h50", "v100" ] ],
+
+    [ "esp:3V3", "lcd:VCC", "red", [ "h30", "v-100", "h60" ] ],
+    [ "esp:GND.1", "lcd:GND", "black", [ "h40", "v-110", "h70" ] ],
+    [ "esp:D21", "lcd:SDA", "blue", [ "h50", "v-120", "h80" ] ],
+    [ "esp:D22", "lcd:SCL", "yellow", [ "h60", "v-130", "h90" ] ]
+  ]
+}
